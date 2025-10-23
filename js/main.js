@@ -61,7 +61,7 @@ var files = (function () {
     Singleton.defaultOptions = {
         "about.txt": "My name is Jonathan Prokos\nI work on computers.",
         "contact.txt": "jobs@prokos.us",
-	"resume.txt": "resume.prokos.us",
+	"resume.txt": "https://resume.prokos.us",
         "linkedin.txt": "https://www.linkedin.com/in/jonathan-p-546765b3/",
         "github.txt": "https://github.com/jprokos1"
     };

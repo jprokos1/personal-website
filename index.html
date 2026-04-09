@@ -1,30 +1,363 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jonathan Prokos</title>
-    <link rel="icon" src="./img/favicon.png" type="image/x-icon" />
-    <link href="./css/main.css" rel="stylesheet" type="text/css" />
-    <script src="./js/polyfills.js"></script>
-    <script src="./js/main.js"></script> </head>
+    <meta name="description" content="Lead Security Research Engineer — adversarial AI, binary analysis, DARPA research programs." />
+    <link rel="icon" href="./img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/site.css" />
+</head>
 
 <body>
-    <div id="sidenav">
-        <button id="sidenavBtn">&#9776;</button>
-        <img id="profilePic" src="./img/profile.jpg" height="auto" width="100%">
-    </div>
-    <div id="container">
-        <div id="output"></div>
-        <div id="input-line" class="input-line">
-            <div id="prompt" class="prompt-color"></div>&nbsp;
-            <div>
-                <input type="text" id="cmdline" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
-                    autofocus/>
+
+    <!-- ===================== Navbar ===================== -->
+    <nav id="navbar">
+        <div class="nav-brand">jp</div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about"><span class="nav-num">01.</span>About</a></li>
+            <li><a href="#experience"><span class="nav-num">02.</span>Experience</a></li>
+            <li><a href="#research"><span class="nav-num">03.</span>Research</a></li>
+            <li><a href="#skills"><span class="nav-num">04.</span>Skills</a></li>
+            <li><a href="#projects"><span class="nav-num">05.</span>Projects</a></li>
+            <li><a href="#contact"><span class="nav-num">06.</span>Contact</a></li>
+            <li><a href="https://resume.prokos.us" target="_blank" class="btn btn-primary btn-sm">Resume ↗</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===================== Hero ===================== -->
+    <section id="hero">
+        <div class="hero-content">
+            <p class="hero-greeting">Hi, I'm</p>
+            <h1 class="hero-name">Jonathan Prokos</h1>
+            <h2 class="hero-title">Lead Security Research Engineer</h2>
+            <p class="hero-bio">
+                I lead DARPA research programs, build offensive security tooling, and work at the intersection
+                of adversarial AI and binary analysis. Based in Arlington, VA.
+            </p>
+            <div class="hero-cta">
+                <a href="https://resume.prokos.us" target="_blank" class="btn btn-primary">View Resume ↗</a>
+                <a href="./ProkosResume.pdf" download class="btn btn-secondary">Download PDF</a>
+                <a href="#contact" class="btn btn-ghost">Get in Touch →</a>
+            </div>
+            <div class="hero-links">
+                <a href="https://github.com/jprokos1" target="_blank">GitHub</a>
+                <span>·</span>
+                <a href="https://www.linkedin.com/in/jonathan-p-546765b3/" target="_blank">LinkedIn</a>
+                <span>·</span>
+                <a href="mailto:jobs@prokos.us">jobs@prokos.us</a>
             </div>
         </div>
-    </div>
-</body>
+        <div class="hero-scroll">
+            <span>scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
 
+    <!-- ===================== About ===================== -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title"><span class="accent">01.</span> About</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        I'm a security researcher and engineer focused on offensive tooling, adversarial machine
+                        learning, and binary vulnerability analysis. I hold a B.S. in Computer Science and an
+                        M.S. in Security Informatics (Masson Fellowship) from
+                        <strong>Johns Hopkins University</strong>, where I conducted peer-reviewed research
+                        published at USENIX Security '23.
+                    </p>
+                    <p>
+                        At <strong>Two Six Technologies</strong>, I lead DARPA research programs as Principal
+                        Investigator, set technical direction across ML and binary reverse engineering domains,
+                        and work directly with government customers to translate high-level requirements into
+                        executable research. I manage direct reports and have grown from individual contributor
+                        to program lead across three roles at the same organization.
+                    </p>
+                    <p>
+                        I'm drawn to problems at the edge of what's known — particularly where AI capabilities
+                        and security intersect, and where the adversarial angle hasn't been fully mapped.
+                    </p>
+                </div>
+                <div class="about-img">
+                    <img src="./img/profile.jpg" alt="Jonathan Prokos" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== Experience ===================== -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title"><span class="accent">02.</span> Experience</h2>
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-meta">
+                        <span class="timeline-date">Oct 2025 – Present</span>
+                        <span class="timeline-company">Two Six Technologies &middot; Arlington, VA</span>
+                    </div>
+                    <h3 class="timeline-role">Lead Security Research Engineer</h3>
+                    <ul class="timeline-bullets">
+                        <li>Responsible for program delivery across research domains including adversarial ML and binary vulnerability research/reverse engineering</li>
+                        <li>Win new work by proposing on internal and customer interests; facilitate new external partnerships</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-meta">
+                        <span class="timeline-date">Jan 2024 – Sep 2025</span>
+                        <span class="timeline-company">Two Six Technologies &middot; Arlington, VA</span>
+                    </div>
+                    <h3 class="timeline-role">Senior Security Research Engineer</h3>
+                    <ul class="timeline-bullets">
+                        <li>Led <strong>DARPA HARDEN program</strong> as Principal Investigator — secured continuation through competitive downselection and recovered the program to a healthy profit margin from a poor financial position</li>
+                        <li>Developed automated &amp; scalable vulnerability analysis pipeline targeting UEFI and Linux Kernel "weird machines," integrated with external performer tooling</li>
+                        <li>Led 3 direct reports on 5G/NR wireless program; presented biweekly findings to team and government customer</li>
+                        <li>Led technical direction of DARPA proposal focused on deriving demographic information from code; coordinated text and figures across internal and external partners</li>
+                        <li>Subject matter expert on red/blue AI adversarial program; built evaluation platform and produced assessments of performer defenses</li>
+                        <li>Interfaced directly with customers to interpret high-level requirements and provide technical guidance</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-meta">
+                        <span class="timeline-date">Jul 2022 – Dec 2023</span>
+                        <span class="timeline-company">Two Six Technologies &middot; Arlington, VA</span>
+                    </div>
+                    <h3 class="timeline-role">Staff Security Research Engineer</h3>
+                    <ul class="timeline-bullets">
+                        <li>Built binary similarity analysis framework using Elasticsearch for efficient large-scale search; published blog post on development process</li>
+                        <li>Developed novel attack modifications to break state-of-the-art defenses across three modalities</li>
+                        <li>Wrote advanced dataflow analysis for a COTS vulnerability detection platform using Binary Ninja</li>
+                        <li>Verified and documented the source of randomness for the first FIPS-compliant JavaScript cryptography library</li>
+                        <li>Managed a summer intern who returned for two additional years — most recently as a direct report</li>
+                        <li>Built data pipeline for final deliverable of an audio-physical machine learning project</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-meta">
+                        <span class="timeline-date">Jun 2020 – Jun 2022</span>
+                        <span class="timeline-company">Matthew Green Lab &middot; Johns Hopkins ISI &middot; Baltimore, MD</span>
+                    </div>
+                    <h3 class="timeline-role">Research Assistant</h3>
+                    <ul class="timeline-bullets">
+                        <li>First author and presenter on paper accepted at
+                            <a href="https://www.usenix.org/conference/usenixsecurity23" target="_blank" class="inline-link">USENIX Security '23</a>
+                        </li>
+                        <li>Performed security analysis of locality-sensitive image hashing algorithms (PhotoDNA, PDQ) against a range of privacy attacks using novel adversarial ML techniques</li>
+                        <li>Designed threat models for attack vectors within existing encryption schemes; developed ML pipeline for testing new hashing algorithms against these models</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== Research ===================== -->
+    <section id="research">
+        <div class="container">
+            <h2 class="section-title"><span class="accent">03.</span> Research</h2>
+            <div class="research-card">
+                <div class="research-badge">USENIX Security '23 &middot; First Author</div>
+                <h3 class="research-title">Squint Hard Enough: Attacking Perceptual Hashing with Adversarial Machine Learning</h3>
+                <p class="research-authors">Jonathan Prokos, Tushar M. Jois, Neil Fendley, Roei Schuster, Matthew Green, Eran Tromer, Yinzhi Cao</p>
+                <p class="research-abstract">
+                    We analyze the security of locality-sensitive image hashing algorithms — including PhotoDNA and PDQ — against
+                    adversarial machine learning attacks. Our work demonstrates fundamental weaknesses in perceptual hashing
+                    as a content moderation primitive, develops formal threat models for their evaluation, and introduces novel
+                    attack techniques that successfully break these systems across multiple modalities.
+                </p>
+                <div class="research-links">
+                    <a href="https://www.usenix.org/conference/usenixsecurity23/presentation/prokos" target="_blank" class="btn btn-primary btn-sm">Read Paper →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== Skills ===================== -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title"><span class="accent">04.</span> Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h4>Languages</h4>
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>C</span>
+                        <span>C++</span>
+                        <span>Rust</span>
+                        <span>Golang</span>
+                        <span>Java</span>
+                        <span>Bash</span>
+                        <span>x86 ASM</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h4>Security Tools</h4>
+                    <div class="tags">
+                        <span>Binary Ninja</span>
+                        <span>Ghidra</span>
+                        <span>IDA Pro</span>
+                        <span>Kali Linux</span>
+                        <span>QEMU</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h4>ML / AI</h4>
+                    <div class="tags">
+                        <span>PyTorch</span>
+                        <span>TensorFlow</span>
+                        <span>Slurm</span>
+                        <span>Android Studio</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h4>Infrastructure</h4>
+                    <div class="tags">
+                        <span>Docker</span>
+                        <span>Git</span>
+                        <span>CI/CD</span>
+                        <span>ElasticSearch</span>
+                        <span>Unix/CLI</span>
+                        <span>Agile/Scrum</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h4>Domains</h4>
+                    <div class="tags">
+                        <span>Adversarial AI</span>
+                        <span>Reverse Engineering</span>
+                        <span>UEFI Security</span>
+                        <span>5G/NR</span>
+                        <span>Cryptology</span>
+                        <span>Privacy</span>
+                        <span>Vulnerability Research</span>
+                        <span>Proposal Writing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== Projects ===================== -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title"><span class="accent">05.</span> Projects</h2>
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-title-row">
+                            <h3>Terminal Portfolio</h3>
+                            <div class="project-links">
+                                <a href="./terminal/" target="_blank">Open ↗</a>
+                            </div>
+                        </div>
+                        <p class="project-desc">
+                            An interactive terminal emulator built in vanilla JavaScript — the predecessor to this site.
+                            Navigate it like a shell: try <code>ls</code>, <code>cat about.txt</code>, or <code>help</code>.
+                        </p>
+                        <div class="tags">
+                            <span>JavaScript</span>
+                            <span>HTML/CSS</span>
+                            <span>Terminal Emulation</span>
+                        </div>
+                    </div>
+                    <div class="terminal-embed">
+                        <div class="terminal-chrome">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="terminal-url">jonathan.prokos.us/terminal</span>
+                        </div>
+                        <iframe
+                            src="./terminal/"
+                            title="Terminal Portfolio"
+                            frameborder="0"
+                            scrolling="no">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== Contact ===================== -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title"><span class="accent">06.</span> Contact</h2>
+            <div class="contact-content">
+                <p>
+                    I'm open to new opportunities and conversations. Whether you have a role to discuss,
+                    want to talk security research, or just want to say hello — feel free to reach out.
+                </p>
+                <a href="mailto:jobs@prokos.us" class="btn btn-primary btn-lg">Say Hello →</a>
+                <div class="contact-links">
+                    <a href="https://github.com/jprokos1" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/jonathan-p-546765b3/" target="_blank">LinkedIn</a>
+                    <a href="https://resume.prokos.us" target="_blank">Resume</a>
+                    <a href="./ProkosResume.pdf" download>Download PDF</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== Footer ===================== -->
+    <footer>
+        <p>Jonathan Prokos &middot; Built with vanilla HTML / CSS / JS</p>
+    </footer>
+
+    <!-- ===================== Scripts ===================== -->
+    <script>
+        // Navbar shadow on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+        // Mobile nav toggle
+        document.getElementById('navToggle').addEventListener('click', () => {
+            document.getElementById('navLinks').classList.toggle('open');
+        });
+
+        // Close mobile nav on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('open');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Fade-in on scroll
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08 });
+
+        document.querySelectorAll('.timeline-item, .research-card, .skill-group, .project-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+</body>
 </html>

@@ -10,17 +10,22 @@
     <script src="../js/polyfills.js"></script>
     <script src="../js/main.js"></script>
     <style>
-        body {
+        html.in-iframe body {
             overflow: hidden;
         }
-        #sidenav {
+        html.in-iframe #sidenav {
             display: none;
         }
-        #container {
+        html.in-iframe #container {
             margin-left: 1em;
             margin-right: 1em;
         }
     </style>
+    <script>
+        if (window.self !== window.top) {
+            document.documentElement.classList.add('in-iframe');
+        }
+    </script>
 </head>
 
 <body>

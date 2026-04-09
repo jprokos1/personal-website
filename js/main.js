@@ -403,7 +403,9 @@ var main = (function () {
     };
 
     Terminal.prototype.focus = function () {
-        this.cmdLine.focus();
+        if (window.self === window.top) {
+            this.cmdLine.focus();
+        }
     };
 
     var TypeSimulator = function (timer, output) {

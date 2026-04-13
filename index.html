@@ -13,6 +13,8 @@
 
 <body>
 
+    <canvas id="starfield" aria-hidden="true"></canvas>
+
     <!-- ===================== Navbar ===================== -->
     <nav id="navbar">
         <div class="nav-brand">jp</div>
@@ -314,6 +316,57 @@
     </footer>
 
     <!-- ===================== Scripts ===================== -->
+    <script>
+        // Starfield
+        (function () {
+            const canvas = document.getElementById('starfield');
+            const ctx = canvas.getContext('2d');
+            let stars = [];
+
+            function resize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+
+            function initStars() {
+                stars = [];
+                const count = Math.floor((canvas.width * canvas.height) / 5500);
+                for (let i = 0; i < count; i++) {
+                    stars.push({
+                        x: Math.random() * canvas.width,
+                        y: Math.random() * canvas.height,
+                        r: Math.random() * 1.1 + 0.2,
+                        baseOpacity: Math.random() * 0.45 + 0.1,
+                        speed: Math.random() * 0.4 + 0.15,
+                        offset: Math.random() * Math.PI * 2,
+                        color: Math.random() < 0.07 ? '#22d3ee' : '#ffffff'
+                    });
+                }
+            }
+
+            let t = 0;
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                t += 0.008;
+                for (const s of stars) {
+                    const opacity = s.baseOpacity + Math.sin(t * s.speed + s.offset) * 0.1;
+                    ctx.globalAlpha = Math.max(0, Math.min(1, opacity));
+                    ctx.fillStyle = s.color;
+                    ctx.beginPath();
+                    ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+                ctx.globalAlpha = 1;
+                requestAnimationFrame(draw);
+            }
+
+            window.addEventListener('resize', () => { resize(); initStars(); });
+            resize();
+            initStars();
+            draw();
+        })();
+    </script>
+
     <script>
         // Navbar shadow on scroll
         const navbar = document.getElementById('navbar');
